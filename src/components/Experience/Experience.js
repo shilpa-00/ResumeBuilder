@@ -26,15 +26,15 @@ const Experience = () => {
     <div className='bg-gray-300 h-screen'>
       <div className='flex flex-col items-center pt-20 gap-5'>
         <div className='flex gap-4'>
-          <p>Enter organization name:</p>
+          <p>Organization Name:</p>
           <input className='rounded' ref={name} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter role:</p>
+          <p>Role:</p>
           <input className='rounded' ref={role} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter duration:</p>
+          <p>Duration:</p>
           <input className='rounded' ref={duration} type="text"/>
         </div>
         <div className='pt-5'>
@@ -48,4 +48,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default Experience;

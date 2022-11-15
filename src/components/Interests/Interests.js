@@ -18,8 +18,10 @@ const Interests = () => {
   return (
     <div className='flex justify-center h-screen pt-20 bg-gray-300'>
       <div className='flex flex-col h-72 pt-30 items-center'>
-        <div><p>Enter the interests to be added:</p></div>
-        <div className='pt-4'><input type="text" className='rounded' ref={interestRef} placeholder='Eg: Reading Books'/></div>
+        <div className='flex gap-5 pt-4'>
+          <p>Interests:</p>
+          <input type="text" className='rounded' ref={interestRef} placeholder='Eg: Reading Books'/>
+        </div>
         <div className='pt-4'><button className='hover:bg-black hover:w-12 text-white px-2 rounded-lg bg-gray-700' onClick={handleSubmit}>Add</button></div>
         <div className='pt-4'>
         <InterestCard/>

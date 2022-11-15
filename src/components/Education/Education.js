@@ -27,19 +27,19 @@ const Education = () => {
     <div className='bg-gray-300 h-screen'>
       <div className='flex flex-col items-center pt-20 gap-5'>
         <div className='flex gap-4'>
-          <p>Enter institution name:</p>
+          <p>Institution Name:</p>
           <input className='rounded' ref={name} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter type:</p>
+          <p>Type:</p>
           <input className='rounded' ref={type} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter CGPA/Percentage:</p>
+          <p>CGPA/Percentage:</p>
           <input className='rounded' ref={result} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter duration:</p>
+          <p>Duration:</p>
           <input className='rounded' ref={duration} type="text"/>
         </div>
         <div className='pt-5'>

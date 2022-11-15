@@ -35,27 +35,27 @@ const BasicInfo = () => {
     {save &&
       <div className='flex flex-col items-center pt-20 gap-5'>
         <div className='flex gap-4'>
-          <p>Enter first name:</p>
+          <p>First Name:</p>
           <input className='rounded' onChange={e=>setFname(e.target.value)} value={fname} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter last name:</p>
+          <p>Last Name:</p>
           <input className='rounded' onChange={e=>setLname(e.target.value)} value={lname} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter tag line:</p>
+          <p>Tag Line:</p>
           <input className='rounded' onChange={e=>setTagline(e.target.value)} value={tagline} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter contact number:</p>
-          <input className='rounded' onChange={e=>setContact(e.target.value)} value={contact} type="number"/>
+          <p>Contact Number:</p>
+          <input className='rounded' onChange={e=>setContact(e.target.value)} value={contact} type="text"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter email:</p>
+          <p>Email:</p>
           <input className='rounded' onChange={e=>setEmail(e.target.value)} value={email} type="email"/>
         </div>
         <div className='flex gap-4'>
-          <p>Enter linkedIn URL:</p>
+          <p>LinkedIn URL:</p>
           <input className='rounded' onChange={e=>setLinkedIn(e.target.value)} value={linkedIn} type="text"/>
         </div>
         <div className='flex gap-4 pt-5'>

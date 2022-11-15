@@ -14,6 +14,7 @@ const Navbar = () => {
           <Link className='h-full' to='/skills'><button className='navbtn'>Skills</button></Link>
           <Link className='h-full' to='/experience'><button className='navbtn'>Experience</button></Link>
           <Link className='h-full' to='/education'><button className='navbtn'>Education</button></Link>
+          <Link className='h-full' to='/projects'><button className='navbtn'>Projects</button></Link>
           <Link className='h-full' to='/interests'><button className='navbtn'>Interests</button></Link>
         </div>
         <div className='h-full'>

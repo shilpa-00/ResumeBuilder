@@ -5,6 +5,7 @@ import BasicInfo from './components/BasicInfo/BasicInfo';
 import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
 import Education from './components/Education/Education';
+import Projects from './components/Projects/Projects';
 import Interests from './components/Interests/Interests';
 import Resume from './components/Resume/Resume';
 import React,{useState} from 'react';
@@ -13,6 +14,7 @@ const BasicDetailContext=React.createContext();
 const SkillContext=React.createContext();
 const EducationContext=React.createContext();
 const ExperienceContext=React.createContext();
+const ProjectContext=React.createContext();
 const InterestContext=React.createContext();
 const DisplayContext=React.createContext();
 
@@ -21,6 +23,7 @@ function App() {
   const [skills,setSkills]=useState([]);
   const [education,setEducation]=useState([]);
   const [experience,setExperience]=useState([]);
+  const [projects,setProjects]=useState([]);
   const [interests,setInterests]=useState([]);
   const [save,setSave]=useState(true);
   const [display,setDisplay]=useState(false);
@@ -36,6 +39,7 @@ function App() {
       <SkillContext.Provider value={[skills,setSkills]}>
       <ExperienceContext.Provider value={[experience,setExperience]}>
       <EducationContext.Provider value={[education,setEducation]}>
+      <ProjectContext.Provider value={[projects,setProjects]}>
       <InterestContext.Provider value={[interests,setInterests]}>
         <Router>
           <Navbar/>
@@ -45,11 +49,13 @@ function App() {
             <Route path='/skills' element={<Skills/>}/>
             <Route path='/education' element={<Education/>}/>
             <Route path='/experience' element={<Experience/>}/>
+            <Route path='/projects' element={<Projects/>}/>
             <Route path='/interests' element={<Interests/>}/>
             <Route path='/resume' element={<Resume/>}/>
           </Routes>
         </Router>
       </InterestContext.Provider>
+      </ProjectContext.Provider>
       </EducationContext.Provider>
       </ExperienceContext.Provider>
       </SkillContext.Provider>
@@ -64,4 +70,5 @@ export {BasicDetailContext};
 export {DisplayContext};
 export {EducationContext};
 export {ExperienceContext};
+export {ProjectContext};
 export {InterestContext};
