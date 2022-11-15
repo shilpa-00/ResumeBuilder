@@ -27,15 +27,15 @@ const Experience = () => {
       <div className='flex flex-col items-center pt-20 gap-5'>
         <div className='flex gap-4'>
           <p>Organization Name:</p>
-          <input className='rounded' ref={name} type="text"/>
+          <input className='rounded' ref={name} placeholder="Amazon" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Role:</p>
-          <input className='rounded' ref={role} type="text"/>
+          <input className='rounded' ref={role} placeholder="Frontend developer" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Duration:</p>
-          <input className='rounded' ref={duration} type="text"/>
+          <input className='rounded' ref={duration} placeholder="2019-Present" type="text"/>
         </div>
         <div className='pt-5'>
           <button className='hover:bg-black hover:w-12 text-white px-2 rounded-lg bg-gray-700' onClick={handleSubmit}>Add</button>

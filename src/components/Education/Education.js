@@ -28,19 +28,19 @@ const Education = () => {
       <div className='flex flex-col items-center pt-20 gap-5'>
         <div className='flex gap-4'>
           <p>Institution Name:</p>
-          <input className='rounded' ref={name} type="text"/>
+          <input className='rounded' ref={name} placeholder="JNTUH" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Type:</p>
-          <input className='rounded' ref={type} type="text"/>
+          <input className='rounded' ref={type} placeholder="Graduation" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>CGPA/Percentage:</p>
-          <input className='rounded' ref={result} type="text"/>
+          <input className='rounded' ref={result} placeholder="90%" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Duration:</p>
-          <input className='rounded' ref={duration} type="text"/>
+          <input className='rounded' ref={duration} placeholder="2019-2023" type="text"/>
         </div>
         <div className='pt-5'>
           <button className='hover:bg-black hover:w-12 text-white px-2 rounded-lg bg-gray-700' onClick={handleSubmit}>Add</button>

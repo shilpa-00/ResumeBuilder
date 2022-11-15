@@ -36,27 +36,27 @@ const BasicInfo = () => {
       <div className='flex flex-col items-center pt-20 gap-5'>
         <div className='flex gap-4'>
           <p>First Name:</p>
-          <input className='rounded' onChange={e=>setFname(e.target.value)} value={fname} type="text"/>
+          <input className='rounded' onChange={e=>setFname(e.target.value)} value={fname} placeholder="John" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Last Name:</p>
-          <input className='rounded' onChange={e=>setLname(e.target.value)} value={lname} type="text"/>
+          <input className='rounded' onChange={e=>setLname(e.target.value)} value={lname} placeholder="Williams" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Tag Line:</p>
-          <input className='rounded' onChange={e=>setTagline(e.target.value)} value={tagline} type="text"/>
+          <input className='rounded' onChange={e=>setTagline(e.target.value)} value={tagline} placeholder="Software Engineer" type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Contact Number:</p>
-          <input className='rounded' onChange={e=>setContact(e.target.value)} value={contact} type="text"/>
+          <input className='rounded' onChange={e=>setContact(e.target.value)} value={contact} placeholder='9999999999' type="text"/>
         </div>
         <div className='flex gap-4'>
           <p>Email:</p>
-          <input className='rounded' onChange={e=>setEmail(e.target.value)} value={email} type="email"/>
+          <input className='rounded' onChange={e=>setEmail(e.target.value)} value={email} placeholder="john@gmail.com" type="email"/>
         </div>
         <div className='flex gap-4'>
           <p>LinkedIn URL:</p>
-          <input className='rounded' onChange={e=>setLinkedIn(e.target.value)} value={linkedIn} type="text"/>
+          <input className='rounded' onChange={e=>setLinkedIn(e.target.value)} value={linkedIn} placeholder="www.linkedin.com/john" type="text"/>
         </div>
         <div className='flex gap-4 pt-5'>
             <button className='hover:bg-black hover:w-12 text-white px-2 rounded-lg bg-gray-700' onClick={handleSubmit}>Save</button>
