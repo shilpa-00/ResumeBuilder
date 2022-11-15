@@ -18,11 +18,11 @@ const Resume = () => {
   const [interests] = useContext(InterestContext);
   const componentRef=useRef();
   return (
-    <div className='flex bg-gray-300 gap-10 h-150 w-full justify-center'>
+    <div className='flex bg-gray-300 gap-10 min-h-150 w-full justify-center'>
       {/* <ReactToPrint trigger={()=><button className='bg-black text-white h-6 justify-end'>Download</button>} content={()=>componentRef.current}/> */}
       {basicDetails !== undefined ? (
-        <div className='mt-10 mb-10'>
-        <div className='bg-white h-144 w-130 shadow-lg shadow-black' ref={componentRef}>
+        <div className='mt-10 mb-10 shadow-lg shadow-black'>
+        <div className='bg-white min-h-144 w-130' ref={componentRef}>
           <div className='flex justify-between bg-orange-100'>
             <div className='flex flex-col justify-center pl-10'>
               <h1 className='font-bold text-4xl capitalize pt-10 pb-1'>{basicDetails[0].fname} {basicDetails[0].lname}</h1>
