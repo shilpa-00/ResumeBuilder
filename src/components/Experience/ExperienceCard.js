@@ -7,7 +7,6 @@ const ExperienceCard = () => {
     const handleDelete=(exp)=>{
         setExperience(experience.filter(item=>item.name!==exp.name))
     }
-    console.log(experience);
     return (
         <div className='grid grid-cols-1 gap-4'>
             {

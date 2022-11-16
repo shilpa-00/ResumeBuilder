@@ -4,11 +4,9 @@ import { InterestContext } from '../../App';
 
 const InterestCard = () => {
     const [interests,setInterests]=useContext(InterestContext);
-    const handleDelete=(skill)=>{
-        setInterests(interests.filter(item => item !== skill))
-        console.log(skill);
+    const handleDelete=(interest)=>{
+        setInterests(interests.filter(item => item !== interest))
     }
-    //console.log(interests);
     return (
         <div className='grid grid-cols-1 gap-2'>
             {

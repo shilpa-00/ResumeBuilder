@@ -11,7 +11,6 @@ const Experience = () => {
   const handleSubmit=()=>{
     if(name.current.value!=='' && role.current.value!=='' && duration.current.value!=='')
     {
-      // console.log(name.current.value);
       setExperience([...experience,{name:name.current.value,role:role.current.value,duration:duration.current.value}])
       name.current.value='';
       role.current.value='';
@@ -21,7 +20,6 @@ const Experience = () => {
       alert("All fields are mandatory");
     }
   }
-  console.log(experience)
   return (
     <div className='bg-gray-300 h-screen'>
       <div className='flex flex-col items-center pt-20 gap-5'>

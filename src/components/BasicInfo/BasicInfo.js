@@ -4,9 +4,9 @@ import { DisplayContext } from '../../App';
 
 const BasicInfo = () => {
     const [basicDetails,setBasicDetails]=useContext(BasicDetailContext);
-    const [save,setSave,display,setDisplay,fname,setFname,lname,setLname,email,setEmail,contact,setContact,tagline,setTagline,linkedIn,setLinkedIn]=useContext(DisplayContext);
+    const [save,setSave,display,setDisplay,fname,setFname,lname,setLname,email,setEmail,contact,setContact,tagline,setTagline,linkedIn,setLinkedIn,objective,setObjective]=useContext(DisplayContext);
     const handleSubmit=(e)=>{
-        if(fname!=='' && lname!=='' && tagline!=='' && contact!=='' && email!=='' && linkedIn!=='')
+        if(fname!=='' && lname!=='' && tagline!=='' && contact!=='' && email!=='' && linkedIn!=='' && objective!=='')
         {
             setBasicDetails([{
                 fname:fname,
@@ -14,7 +14,8 @@ const BasicInfo = () => {
                 tagline:tagline,
                 contact:contact,
                 email:email,
-                linkedIn:linkedIn
+                linkedIn:linkedIn,
+                objective:objective
             }])
             setSave(false);
             setDisplay(true);
@@ -58,6 +59,10 @@ const BasicInfo = () => {
           <p>LinkedIn URL:</p>
           <input className='rounded' onChange={e=>setLinkedIn(e.target.value)} value={linkedIn} placeholder="www.linkedin.com/john" type="text"/>
         </div>
+        <div className='flex gap-4'>
+          <p>Objective:</p>
+          <textarea className='rounded w-64 h-16' onChange={e=>setObjective(e.target.value)} value={objective} type="text"/>
+        </div>
         <div className='flex gap-4 pt-5'>
             <button className='hover:bg-black hover:w-12 text-white px-2 rounded-lg bg-gray-700' onClick={handleSubmit}>Save</button>
         </div>
@@ -90,6 +95,10 @@ const BasicInfo = () => {
         <div className='flex gap-4'>
           <p>LinkedIn URL:</p>
           <p>{linkedIn}</p>
+        </div>
+        <div className='flex gap-4 w-120'>
+          <p>Objective:</p>
+          <p>{objective}</p>
         </div>
         <div className='flex gap-4 pt-5'>
           <button className='hover:bg-black hover:w-12 text-white px-2 rounded-lg bg-gray-700' onClick={handleSave}>Edit</button>

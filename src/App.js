@@ -33,9 +33,10 @@ function App() {
   const [contact,setContact]=useState();
   const [email,setEmail]=useState();
   const [linkedIn,setLinkedIn]=useState();
+  const [objective,setObjective]=useState();
   return (
     <BasicDetailContext.Provider value={[basicDetails,setBasicDetails]}>
-      <DisplayContext.Provider value={[save,setSave,display,setDisplay,fname,setFname,lname,setLname,tagline,setTagline,email,setEmail,contact,setContact,linkedIn,setLinkedIn]}>
+      <DisplayContext.Provider value={[save,setSave,display,setDisplay,fname,setFname,lname,setLname,tagline,setTagline,email,setEmail,contact,setContact,linkedIn,setLinkedIn,objective,setObjective]}>
       <SkillContext.Provider value={[skills,setSkills]}>
       <ExperienceContext.Provider value={[experience,setExperience]}>
       <EducationContext.Provider value={[education,setEducation]}>

@@ -7,7 +7,6 @@ const EducationCard = () => {
     const handleDelete=(edu)=>{
         setEducation(education.filter(item=>item.name!==edu.name))
     }
-    console.log(education);
     return (
         <div className='grid grid-cols-1 gap-4'>
             {

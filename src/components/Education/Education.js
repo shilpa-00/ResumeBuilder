@@ -12,7 +12,6 @@ const Education = () => {
   const handleSubmit=()=>{
     if(name.current.value!=='' && type.current.value!=='' && result.current.value!=='' && duration.current.value!=='')
     {
-      // console.log(name.current.value);
       setEducation([...education,{name:name.current.value,type:type.current.value,result:result.current.value,duration:duration.current.value}])
       name.current.value='';
       type.current.value='';

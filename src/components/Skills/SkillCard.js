@@ -6,9 +6,7 @@ const SkillCard = () => {
     const [skills,setSkills]=useContext(SkillContext);
     const handleDelete=(skill)=>{
         setSkills(skills.filter(item => item !== skill))
-        //console.log(skill);
     }
-    //console.log(skills);
     return (
         <div className='grid grid-cols-1 gap-2'>
             {

@@ -18,11 +18,11 @@ const Resume = () => {
   const [interests] = useContext(InterestContext);
   const componentRef=useRef();
   return (
-    <div className='flex bg-gray-300 gap-10 min-h-150 w-full justify-center'>
+    <div className='flex bg-gray-300 gap-10 h-150 w-full justify-center'>
       {/* <ReactToPrint trigger={()=><button className='bg-black text-white h-6 justify-end'>Download</button>} content={()=>componentRef.current}/> */}
       {basicDetails !== undefined ? (
-        <div className='mt-10 mb-10 shadow-lg shadow-black'>
-        <div className='bg-white min-h-144 w-130' ref={componentRef}>
+        <div className='mt-20 mb-10 h-144 bg-white shadow-lg shadow-black'>
+        <div className='w-130' ref={componentRef}>
           <div className='flex justify-between bg-orange-100'>
             <div className='flex flex-col justify-center pl-10'>
               <h1 className='font-bold text-4xl capitalize pt-10 pb-1'>{basicDetails[0].fname} {basicDetails[0].lname}</h1>
@@ -44,6 +44,11 @@ const Resume = () => {
             </div>
           </div>
           <div className='border-b-2 border-gray-300'></div>
+          <div className='flex flex-col pt-2'>
+            <h1 className='flex justify-center text-lg rounded-lg bg-orange-100 w-24'>Objective</h1>
+            <p className='pl-8 pr-8 text-sm'>{basicDetails[0].objective}</p>
+          </div>
+          <div className='border-b-2 border-gray-300 py-1'></div>
           {experience.length > 0 ? (
             <div className='flex flex-col pt-2'>
               <h1 className='flex justify-center text-lg rounded-lg bg-orange-100 w-24'>Experience</h1>
@@ -91,7 +96,7 @@ const Resume = () => {
                   return (
                     <div key={project.name} className='flex flex-col'>
                       <p className='pl-5 font-bold text-lg'>{project.name}</p>
-                      <div className='h-fit w-fit'><p className='pl-8 text-sm'>{project.description}</p></div>
+                      <div className='h-fit w-fit'><p className='pl-8 pr-8 text-sm'>{project.description}</p></div>
                     </div>
                   )
                 })
@@ -127,8 +132,7 @@ const Resume = () => {
               <div className='border-b-2 border-gray-300'></div>
             </div>) : (<div></div>)
           }
-          {
-            skills.length>0 && interests.length===0 ? (
+          {skills.length>0 && interests.length===0 ? (
             <div className='pt-2'>
               <div className='pl-5'>
                 <h1 className='flex justify-center text-lg rounded-lg bg-orange-100 w-16'>Skills</h1>
@@ -142,8 +146,7 @@ const Resume = () => {
               </div>
             </div>):(<div></div>)
           }
-          {
-            interests.length>0 && skills.length===0 ? (
+          {interests.length>0 && skills.length===0 ? (
             <div className='pt-2'>
               <div className='pl-5'>
                 <h1 className='flex justify-center text-lg rounded-lg bg-orange-100 w-20'>Interests</h1>
@@ -160,11 +163,11 @@ const Resume = () => {
         </div>
         </div>
       ) : (
-        <div className='bg-white mt-10 mb-10 w-1/2 min-w-fit shadow-lg shadow-black'>
+        <div className='mt-20 mb-10 h-144  shadow-lg shadow-black bg-white w-130'>
           <div className='h-36 bg-orange-100'></div>
         </div>
       )}
-    <ReactToPrint trigger={()=><button className='h-6 bg-white hover:shadow-xl hover:h-7 shadow-black  px-1 mt-10 rounded-lg'>Download</button>} content={()=>componentRef.current}/>
+    <ReactToPrint trigger={()=><button className='h-6 bg-white hover:shadow-xl hover:h-7 shadow-black  px-1 mt-20 rounded-lg'>Download</button>} content={()=>componentRef.current}/>
     </div>
   )
 }
