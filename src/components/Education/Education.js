@@ -23,7 +23,7 @@ const Education = () => {
     }
   }
   return (
-    <div className='bg-gray-300 h-screen'>
+    <div className='bg-gray-300 h-150'>
       <div className='flex flex-col items-center pt-20 gap-5'>
         <div className='flex gap-4'>
           <p>Institution Name:</p>
