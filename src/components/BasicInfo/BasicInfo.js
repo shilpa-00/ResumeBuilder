@@ -6,7 +6,7 @@ const BasicInfo = () => {
     const [basicDetails,setBasicDetails]=useContext(BasicDetailContext);
     const [save,setSave,display,setDisplay,fname,setFname,lname,setLname,email,setEmail,contact,setContact,tagline,setTagline,linkedIn,setLinkedIn,objective,setObjective]=useContext(DisplayContext);
     const handleSubmit=(e)=>{
-        if(fname!=='' && lname!=='' && tagline!=='' && contact!=='' && email!=='' && linkedIn!=='' && objective!=='')
+        if(fname!==undefined && lname!==undefined && tagline!==undefined && contact!==undefined && email!==undefined && linkedIn!==undefined && objective!==undefined)
         {
             setBasicDetails([{
                 fname:fname,
